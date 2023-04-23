@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8c7bb5">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_26sdp">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/background_login"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:fontFamily="monospace"
+                android:text="Register"
+                android:textColor="#353535"
+                android:textSize="@dimen/_30sdp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:background="@drawable/custom_form_register"
+                android:orientation="vertical"
+                android:scaleType="fitXY"
+                android:weightSum="12">
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="UserName"
+                        android:gravity="center|left"
+                        android:textColor="#000000"
+                        android:fontFamily="monospace"
+                        android:textSize="@dimen/_18sdp"/>
+
+                    <EditText
+                        android:id="@+id/editTxtUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_edittext"
+                        android:ems="10"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/_18sdp"
+                        android:hint="Enter UserName"
+                        android:fontFamily="monospace"
+                        android:inputType="textPersonName" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Password"
+                        android:gravity="center|left"
+                        android:textColor="#000000"
+                        android:fontFamily="monospace"
+                        android:textSize="@dimen/_18sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_edittext"
+                        android:orientation="horizontal"
+                        android:weightSum="2.5">
+                        <EditText
+                            android:id="@+id/editTxtPassword"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:ems="10"
+                            android:gravity="center|left"
+                            android:paddingLeft="@dimen/_18sdp"
+                            android:hint="Enter Password"
+                            android:fontFamily="monospace"
+                            android:inputType="textPassword"
+                            android:background="@null"/>
+                        <ImageView
+                            android:id="@+id/imgShowHidePass"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.3"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icons8_hide"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Email"
+                        android:gravity="center|left"
+                        android:textColor="#000000"
+                        android:fontFamily="monospace"
+                        android:textSize="@dimen/_18sdp"/>
+
+                    <EditText
+                        android:id="@+id/editTxtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_edittext"
+                        android:ems="10"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/_18sdp"
+                        android:hint="Enter email"
+                        android:fontFamily="monospace"
+                        android:inputType="textEmailAddress"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1.4"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txtPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Phone"
+                        android:gravity="center|left"
+                        android:textColor="#000000"
+                        android:fontFamily="monospace"
+                        android:textSize="@dimen/_18sdp"/>
+
+                    <EditText
+                        android:id="@+id/editTxtPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_edittext"
+                        android:ems="10"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/_18sdp"
+                        android:hint="Enter phone"
+                        android:fontFamily="monospace"
+                        android:inputType="phone" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.7"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_marginRight="@dimen/_28sdp"
+                        android:text="Male"
+                        android:fontFamily="monospace"
+                        android:textSize="@dimen/_14sdp"/>
+                    <RadioButton
+                        android:id="@+id/radioFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_28sdp"
+                        android:text="Female"
+                        android:fontFamily="monospace"
+                        android:textSize="@dimen/_14sdp"/>
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_25sdp">
+
+                    <Button
+                        android:id="@+id/btnRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/custom_button_login"
+                        android:text="Register"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_20sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"/>
+                    <TextView
+                        android:id="@+id/txtQuestion"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center|right"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:text="Do have an account?"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/txtLoginPage"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9"
+                        android:gravity="center|left"
+                        android:text="Login"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnLoginGoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_btn_loginwithgoogle"
+                    android:text="Login with Google"
+                    android:fontFamily="monospace"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_16sdp"
+                    android:drawableLeft="@drawable/icons8_google"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</LinearLayout>

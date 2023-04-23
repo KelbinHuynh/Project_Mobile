@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Smaller_Drawable">
+        <item name="android:scaleX">0.1</item>
+        <item name="android:scaleY">0.1</item>
+    </style>
+</resources>
