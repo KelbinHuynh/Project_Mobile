@@ -1,25 +1,38 @@
 <resources>
     <string name="app_name">MainProject</string>
-    <string name="account_balance">Account Balance</string>
-    <string name="balance_currency">$</string>
-    <string name="balance_amount">524.99</string>
 
     <string-array name="ld_activityScreenTitles">
         <item>Home</item>
-        <item>My Account</item>
-        <item>Messages</item>
         <item>Cart</item>
+        <item>My Account</item>
+        <item>Order</item>
         <item />
         <item>Log Out</item>
     </string-array>
 
     <array name="ld_activityScreenIcons">
-        <item>@drawable/icons8_home</item>
-        <item>@drawable/icons8_account</item>
-        <item>@drawable/icons8_home</item>
-        <item>@drawable/icons8_home</item>
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_cart</item>
+        <item>@drawable/ic_profile</item>
+        <item>@drawable/icons8_order</item>
         <item>0</item>
-        <item>@drawable/icons8_home</item>
+        <item>@drawable/ic_logout</item>
+    </array>
+
+    <string-array name="sender_activityScreenTitles">
+        <item>Product Management</item>
+        <item>Order Management</item>
+<!--        <item>Account Management</item>-->
+        <item />
+        <item>Log out</item>
+    </string-array>
+
+    <array name="sender_activityScreenIcons">
+        <item>@drawable/ic_product</item>
+        <item>@drawable/icons8_order</item>
+<!--        <item>@drawable/ic_profile</item>-->
+        <item>0</item>
+        <item>@drawable/ic_logout</item>
     </array>
 
 </resources>
