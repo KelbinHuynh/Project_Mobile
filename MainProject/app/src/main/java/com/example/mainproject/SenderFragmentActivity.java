@@ -47,8 +47,9 @@ public class SenderFragmentActivity extends AppCompatActivity implements DrawerM
 
     private static final int POS_PRODUCT = 0;
     private static final int POS_ORDER = 1;
+    private static final int POS_STATISTIC = 2;
 
-    private static final int POS_LOGOUT = 3;
+    private static final int POS_LOGOUT = 4;
 
     private String[] screenTitles;
     private Drawable[] screenIcons;
@@ -86,6 +87,7 @@ public class SenderFragmentActivity extends AppCompatActivity implements DrawerM
                 createItemFor(POS_PRODUCT).setChecked(true),
                 createItemFor(POS_ORDER),
 //                createItemFor(POS_ACCOUNT),
+                createItemFor(POS_STATISTIC),
                 new SpaceItem(48),
                 createItemFor(POS_LOGOUT)));
         adapter.setListener(this);
@@ -143,6 +145,11 @@ public class SenderFragmentActivity extends AppCompatActivity implements DrawerM
         if(position == POS_ORDER){
             OrderManagerFragment orderFragment = new OrderManagerFragment();
             showFragment(orderFragment);
+        }
+
+        if(position == POS_STATISTIC){
+            SalesFragment salesFragment = new SalesFragment();
+            showFragment(salesFragment);
         }
     }
 

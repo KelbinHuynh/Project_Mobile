@@ -1,8 +1,13 @@
 package com.example.mainproject;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,7 +19,6 @@ import com.example.mainproject.Adapter.CategoryFilterAdapter;
 import com.example.mainproject.Api.APIService;
 import com.example.mainproject.Api.RetrofitClient;
 import com.example.mainproject.Model.Category;
-import com.example.mainproject.ResponeAPI.ResponseToAPI;
 
 import java.util.List;
 
@@ -26,6 +30,8 @@ public class FilterActivity extends AppCompatActivity {
 
     private RecyclerView rvListCategory;
     private TextView txtFemale, txtMale;
+    private Button btnReset, btnSearch;
+    private ImageButton icback;
     APIService apiService;
     SharedPreferences sharedpreferences;
     List<Category> categoryList;
@@ -35,6 +41,7 @@ public class FilterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter);
         AnhXa();
+        sharedpreferences = getSharedPreferences("dataFilter", Context.MODE_PRIVATE);
         getAllCategory();
     }
 
@@ -42,6 +49,9 @@ public class FilterActivity extends AppCompatActivity {
         rvListCategory = (RecyclerView) findViewById(R.id.rvListCategory);
         txtMale = (TextView) findViewById(R.id.txtMale);
         txtFemale = (TextView) findViewById(R.id.txtFemale);
+        btnSearch = (Button) findViewById(R.id.btnSearch);
+        btnReset = (Button) findViewById(R.id.btnReset);
+        icback = (ImageButton) findViewById(R.id.icback);
     }
 
     private void getAllCategory(){
@@ -56,6 +66,33 @@ public class FilterActivity extends AppCompatActivity {
                     rvListCategory.setAdapter(categoryFilterAdapter);
                     linearLayoutManager = new LinearLayoutManager(FilterActivity.this);
                     rvListCategory.setLayoutManager(linearLayoutManager);
+
+                    btnReset.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            SharedPreferences.Editor editor = sharedpreferences.edit();
+                            editor.clear().commit();
+                            finish();
+                            startActivity(getIntent());
+                        }
+                    });
+
+                    btnSearch.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            startActivity(new Intent(FilterActivity.this, SearchFinalActivity.class));
+                        }
+                    });
+
+                    icback.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            SharedPreferences.Editor editor = sharedpreferences.edit();
+                            editor.clear().commit();
+                            finish();
+                            startActivity(new Intent(FilterActivity.this, MenuFragmentActivity.class));
+                        }
+                    });
 
                 }else {
                     Toast.makeText(FilterActivity.this, "Error! Please try again!", Toast.LENGTH_SHORT).show();

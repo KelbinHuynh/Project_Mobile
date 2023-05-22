@@ -54,6 +54,9 @@
             android:name=".FilterActivity">
         </activity>
         <activity
+            android:name=".SearchFinalActivity">
+        </activity>
+        <activity
             android:name=".SenderFragmentActivity">
         </activity>
         <meta-data
